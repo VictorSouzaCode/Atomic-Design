@@ -3,7 +3,7 @@
 function App() {
 
   return (
-    <h1>Initial Page</h1>
+    <h1 className="bg-green-500 text-white">Initial Page</h1>
   )
 }
 
