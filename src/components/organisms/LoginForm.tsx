@@ -11,9 +11,9 @@ export const LoginForm = () => {
 
         <FormHeader title="Login" routeFor="signup"/>
 
-        <InputField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"/>
+        <InputField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
 
-        <InputField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password"/>
+        <InputField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
 
         <FormActions/>
     </form>
