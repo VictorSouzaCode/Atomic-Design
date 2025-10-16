@@ -1,5 +1,6 @@
-import { InputField, FormActions } from "../molecules"
+import { InputField, FormActions, FormHeader } from "../molecules"
 import { useState } from "react"
+
 
 export const LoginForm = () => {
 
@@ -13,7 +14,8 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
-        <h2 className="text-2xl font-medium">Login</h2>
+
+        <FormHeader title="Login" routeFor="signup"/>
 
         <InputField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"/>
 
