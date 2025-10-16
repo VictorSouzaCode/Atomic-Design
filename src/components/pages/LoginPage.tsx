@@ -1,5 +1,5 @@
-import { AuthTemplate } from "../templates/AuthTemplate"
 import { LoginForm } from "../organisms/LoginForm"
+import { AuthTemplate } from "../templates/AuthTemplate"
 
 
 const LoginPage = () => {

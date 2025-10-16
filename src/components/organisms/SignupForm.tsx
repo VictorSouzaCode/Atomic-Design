@@ -1,9 +1,16 @@
 import { InputField, FormActions, FormHeader } from "../molecules"
-import { useAuth } from "../hooks/useAuth";
+import { useState } from "react";
 
-const SignupForm = () => {
+export const SignupForm = () => {
 
-  const {email, setEmail, password, setPassword, name, setName, handleSubmit} = useAuth()
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`Creating account for ${name}`);
+  };
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
@@ -20,4 +27,7 @@ const SignupForm = () => {
   )
 }
 
-export default SignupForm
+
+// Uses the same atoms and molecules as the login form.
+// Only the internal logic (state + handleSubmit) differs.
+// It still doesn’t define layout — that’s for the Template.
