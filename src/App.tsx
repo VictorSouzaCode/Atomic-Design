@@ -1,14 +1,8 @@
-import { Button } from "./components/atoms/Button"
-import { Input } from "./components/atoms/Input"
-
+import AuthPage from "./components/pages/AuthPage"
 function App() {
 
   return (
-    <div>
-      <h1 className="bg-green-500 text-white">Initial Page</h1>
-      <Button label="Press" size="small"/>
-      <Input/>
-    </div>
+    <AuthPage/>
   )
 }
 

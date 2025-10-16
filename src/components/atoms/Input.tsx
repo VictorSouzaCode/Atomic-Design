@@ -1,5 +1,5 @@
 
-type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
     type?: string,
     value?: string,
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
