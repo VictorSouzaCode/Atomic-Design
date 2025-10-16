@@ -1,12 +1,11 @@
-
+import SignupForm from "../organisms/SignupForm"
+import { AuthTemplate } from "../templates/AuthTemplate"
 
 const SignupPage = () => {
   return (
-    <div>
-      <h1>SignupPage</h1>
-      <h1>SignupPage</h1>
-      <h1>SignupPage</h1>
-    </div>
+    <AuthTemplate>
+      <SignupForm />
+    </AuthTemplate>
   )
 }
 

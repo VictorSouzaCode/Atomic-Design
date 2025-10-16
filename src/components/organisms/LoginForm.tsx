@@ -1,17 +1,11 @@
 import { InputField, FormActions, FormHeader } from "../molecules"
-import { useState } from "react"
+import { useAuth } from "../hooks/useAuth"
 
 
 export const LoginForm = () => {
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("");
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        alert(`Logging in as ${email}`)
-    }
-
+    const {email, setEmail, password, setPassword, handleSubmit} = useAuth()
+    
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
 

@@ -1,9 +1,20 @@
-// next step is make a signup form
-// try to make it first then later look at chat gpt to see how it did it
+import { InputField, FormActions, FormHeader } from "../molecules"
+import { useAuth } from "../hooks/useAuth";
 
 const SignupForm = () => {
+
+  const {email, setEmail, password, setPassword, handleSubmit} = useAuth()
+
   return (
-    <div>SignupForm</div>
+    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+      <FormHeader title="Sign-Up" routeFor="/"/>
+
+      <InputField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"/>
+
+      <InputField label="Email" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password"/>
+
+      <FormActions/>
+    </form>
   )
 }
 
