@@ -1,7 +1,7 @@
 import { AuthTemplate } from "../templates/AuthTemplate"
 import { LoginForm } from "../organisms/LoginForm"
 
-const AuthPage = () => {
+const LoginPage = () => {
   return (
     <AuthTemplate>
         <LoginForm/>
@@ -9,4 +9,4 @@ const AuthPage = () => {
   )
 }
 
-export default AuthPage
+export default LoginPage
