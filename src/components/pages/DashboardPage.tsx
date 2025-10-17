@@ -1,12 +1,20 @@
-import { Link } from "react-router-dom"
+import { BaseTemplate } from "../templates/BaseTemplate"
+
 
 const DashboardPage = () => {
   return (
-    <div className="gap-4">
-      <Link to="/" className="text-blue-500">Login</Link>
-      <p>DashboardPage</p>
-    </div>
+    <BaseTemplate>
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Welcome back!</h2>
+          <p className="text-gray-700">
+          This is your dashboard. You can add charts, tables, or cards here later.
+        </p>
+      </section>
+    </BaseTemplate>
   )
 }
 
 export default DashboardPage
+
+// Uses the BaseTemplate, just like LoginPage uses AuthTemplate.
+// The key difference is the layout, not the page content.
