@@ -1,5 +1,6 @@
 import { InputField, FormActions, FormHeader } from "../molecules"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 export const LoginForm = () => {
@@ -23,6 +24,8 @@ export const LoginForm = () => {
         <InputField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
 
         <FormActions/>
+
+        <Link to="dashboard">Dash</Link>
     </form>
   )
 }
