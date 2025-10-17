@@ -1,4 +1,4 @@
-import { SignupForm } from "../organisms/SignupForm"
+import { SignupForm } from "../organisms"
 import { AuthTemplate } from "../templates/AuthTemplate"
 
 const SignupPage = () => {

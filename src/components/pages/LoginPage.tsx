@@ -1,4 +1,4 @@
-import { LoginForm } from "../organisms/LoginForm"
+import { LoginForm } from "../organisms"
 import { AuthTemplate } from "../templates/AuthTemplate"
 
 
