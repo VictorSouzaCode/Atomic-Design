@@ -7,7 +7,6 @@ export const Sidebar = () => {
       <nav className="flex flex-col items-center mt-6 gap-y-4 space-y-3">
         <Link to="/" className="hover:text-blue-600">Login</Link>
         <Link to="signup" className="hover:text-blue-600">Sign-up</Link>
-        <Link to="dashboard" className="hover:text-blue-600">Dashboard</Link>
       </nav>
     </aside>
   )
