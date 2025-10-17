@@ -31,3 +31,6 @@ export const SignupForm = () => {
 // Uses the same atoms and molecules as the login form.
 // Only the internal logic (state + handleSubmit) differs.
 // It still doesn’t define layout — that’s for the Template.
+// templates ensure consistent layouts.
+// pages bring everything together with data and routing.
+// add new features (Signup) without breaking existing code.
