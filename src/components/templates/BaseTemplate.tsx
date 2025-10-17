@@ -19,10 +19,10 @@ export const BaseTemplate = ({
       {/* Sidebar */}
       <Sidebar/>
 
-      <div className="w-full">
+      <div className="flex flex-col flex-1">
         {/* Header */}
         <Header/>
-        <main>{children}</main>
+        <main className="p-6">{children}</main>
       </div>
     </div>
   )

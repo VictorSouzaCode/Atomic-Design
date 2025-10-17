@@ -2,8 +2,8 @@ import { Button } from "../atoms"
 
 export const Header = () => {
   return (
-    <header className="shadow-sm p-4 flex justify-between items-center">
-      <h1 className="font-semibold text-2xl text-gray-800">Dashboard</h1>
+    <header className="shadow-sm p-4 flex justify-between items-center bg-gray-100">
+      <h1 className="font-semibold text-xl text-gray-800">Dashboard</h1>
       <Button label="Log out" size="small" variant="secondary"></Button>
     </header>
   )
