@@ -24,11 +24,11 @@ Simple visualization
 
  └── Template
 
-      └── Organism
+ └── Organism
 
-           └── Molecules
+ └── Molecules
 
-                └── Atoms
+ └── Atoms
 
 Each layer depends only on the one below it, never above.That’s how professionals keep their UIs scalable, consistent, and reusable.
 
