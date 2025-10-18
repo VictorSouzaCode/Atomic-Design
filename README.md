@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# Atomic Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I Built a simple login, signup and dashboard pages and all of them were structured according to Atomic Design.
 
-Currently, two official plugins are available:
+### Atomic design concept
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Atoms: Label, Input, Button, The Smallest Reusable Pieces
 
-## React Compiler
+Molecules: InputField (Label + Input), FormActions (Buttons together), Atoms Working Together
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Organisms: LoginForm (collection of Molecules), Larger Functional Groups
 
-## Expanding the ESLint configuration
+Template: AuthTemplate (basic layout for auth pages), Page Layouts Without Content
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Page: LoginPage (actual page with content), Real Content + Data
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Putting It All Together, In my main.tsx (or App.tsx):
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+/* simple visualization
+Page
+ └── Template
+      └── Organism
+           └── Molecules
+                └── Atoms
+*/
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Each layer depends only on the one below it, never above.That’s how professionals keep their UIs scalable, consistent, and reusable.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+## Why This Matters?
+ 
+Consistency: Every part of my UI uses the same atoms molecules.
+
+Reusability: Build once, use anywhere.
+
+Scalability: When my app grows, I just compose new organisms or templates.
+
+Maintainability: If I redesign a button, it updates everywhere automatically.
