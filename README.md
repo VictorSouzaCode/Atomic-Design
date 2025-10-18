@@ -21,9 +21,13 @@ Putting It All Together, In my main.tsx (or App.tsx):
 Simple visualization
 
 Page
+
  └── Template
+
       └── Organism
+
            └── Molecules
+           
                 └── Atoms
 
 Each layer depends only on the one below it, never above.That’s how professionals keep their UIs scalable, consistent, and reusable.
