@@ -2,7 +2,7 @@
 
 I Built a simple login, signup and dashboard pages and all of them were structured according to Atomic Design.
 
-### Atomic design concept
+### Atomic design explained
 
 Atoms: Label, Input, Button, The Smallest Reusable Pieces
 
@@ -18,18 +18,17 @@ Page: LoginPage (actual page with content), Real Content + Data
 Putting It All Together, In my main.tsx (or App.tsx):
 
 
-/* simple visualization
+Simple visualization
 Page
  └── Template
       └── Organism
            └── Molecules
                 └── Atoms
-*/
 
 Each layer depends only on the one below it, never above.That’s how professionals keep their UIs scalable, consistent, and reusable.
 
 
-## Why This Matters?
+### Why This Matters?
  
 Consistency: Every part of my UI uses the same atoms molecules.
 
