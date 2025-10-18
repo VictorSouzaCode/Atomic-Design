@@ -1,6 +1,6 @@
 import { Card } from "../atoms"
 
-type StatCardProps = {
+export type StatCardProps = {
     title: string,
     value: number | string,
     icon?: React.ReactNode
