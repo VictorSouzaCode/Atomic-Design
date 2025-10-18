@@ -19,6 +19,7 @@ Putting It All Together, In my main.tsx (or App.tsx):
 
 
 Simple visualization
+
 Page
  └── Template
       └── Organism
