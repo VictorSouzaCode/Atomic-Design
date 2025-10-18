@@ -1,32 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import type { StatCardProps } from "../molecules/StatCard";
-
-type Stats = {
-  users: number;
-  orders: number;
-  revenue: number;
-};
-
-const fetchStats = async (): Promise<Stats> => {
-  const res = await fetch("/api/stats"); // replace with real API
-  if (!res.ok) throw new Error("Failed to fetch stats");
-  return res.json();
-};
-/* async: Makes the function return a Promise
-
-Promise<Stats>: TypeScript return type - promises to return a Stats object
-
-Error handling: Throws an error if the HTTP response is not successful (status outside 200-299)
-
-res.json(): Parses the JSON response body
-
-*/
-
+import { fetchDashboardStats } from "../../mockServer";
 
 export const useDashboardStats = () => {
   return useQuery({
     queryKey: ["dashboardStats"],
-    queryFn: fetchStats,
+    queryFn: fetchDashboardStats,
     staleTime: 1000 * 60, // 1 minute
     refetchInterval: 1000 * 30, // refetch every 30 seconds
   });

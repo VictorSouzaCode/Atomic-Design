@@ -20,10 +20,10 @@ export const BaseTemplate = ({
       <Sidebar/>
 
       <div className="flex flex-col flex-1">
-        {/* Header */}
         <Header/>
         <main className="p-6">{children}</main>
       </div>
+
     </div>
   )
 }
